@@ -18,6 +18,11 @@ inference_config = InferenceConfig(entry_script="score.py", environment=myenv)
 
 deployment_config = LocalWebservice.deploy_configuration(port=6789)
 
+# Azure deploy
+# dep_config = AciWebservice.deploy_configuration(cpu_cores = 1,
+#                                                 memory_gb = 1,
+#                                                 enable_app_insights=True)
+
 localservice = Model.deploy(workspace=ws, 
                        name='lmmodel', 
                        models=[model], 
