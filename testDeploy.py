@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 # For dataframe input
-preddf = pd.DataFrame({"bias":[1], "X": [5]})
+preddf = pd.DataFrame({"bias":[1,1], "X": [5,7]})
 input_data = "{\"data\": " + str(preddf.values.tolist()) + "}"
 
 # One input
