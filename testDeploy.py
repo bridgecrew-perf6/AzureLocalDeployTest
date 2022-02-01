@@ -3,13 +3,14 @@ import requests
 import pandas as pd
 import numpy as np
 
+# For dataframe input
+preddf = pd.DataFrame({"bias":[1], "X": [5]})
+input_data = "{\"data\": " + str(preddf.values.tolist()) + "}"
 
-# preddata = pd.DataFrame({"bias":[1], "X": [5]})
-# preddata = np.array([1,5]).reshape(1,-1)
-# input_data = '{\"data\": ' + str(df.to_dict(orient='records')) + '}'
-
-# input_data = "{\"data\": [" + str(preddata) + "]}"
-input_data = "{\"data\": [[1, 7]]}"
+# One input
+# input_data = "{\"data\": [[1, 7]]}"
+# Two rows 1,7 & 1,5
+#input_data = "{\"data\": [ [1, 7], [1, 5] ]}"
 
 headers = {"Content-Type": "application/json"}
 
